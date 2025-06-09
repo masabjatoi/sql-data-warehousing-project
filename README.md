@@ -5,8 +5,7 @@ This project showcases a comprehensive end-to-end **data warehousing and analyti
 
 ---
 
-## 🏗️ Architecture Overview
-
+## 🏗️ Data Architecture 
 The architecture follows a **layered approach** for scalability, modularity, and clarity:
 
 ![Architecture Diagram](Architecture/Screenshot%202025-06-09%20234256.png)
