@@ -1,0 +1,40 @@
+# DataWarehouse Setup Script
+
+This SQL script sets up a database called `DataWarehouse` and creates three schemas within it: `bronze`, `silver`, and `gold`.
+
+### What the script does:
+- Switches to the system database (`master`) to create a new database if it doesn’t exist.
+- Creates the `DataWarehouse` database.
+- Switches to the `DataWarehouse` database.
+- Creates three schemas:
+  - `bronze` for raw data
+  - `silver` for cleaned/transformed data
+  - `gold` for aggregated or final data for analysis
+
+This structure helps organize data processing stages in a data warehouse environment.
+
+### How to use:
+Run the SQL script in your SQL client connected to your database server. The script will set up the database and schemas automatically.
+
+
+
+-- Switch to the master database to create the new database
+USE master;
+
+-- Create the database if it does not already exist
+CREATE DATABASE IF NOT EXISTS DataWarehouse;
+
+-- Switch to the newly created (or existing) DataWarehouse database
+USE DataWarehouse;
+
+-- Create bronze schema to hold raw data
+CREATE SCHEMA bronze;
+GO
+
+-- Create silver schema to hold cleaned/processed data
+CREATE SCHEMA silver;
+GO
+
+-- Create gold schema to hold aggregated/analytics data
+CREATE SCHEMA gold;
+GO
